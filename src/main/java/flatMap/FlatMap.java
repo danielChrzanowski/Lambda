@@ -20,7 +20,7 @@ public class FlatMap {
 
         var lista2 = lista
                 .stream()
-                .flatMap(Collection::stream)
+                .flatMap(x -> x.stream())
                 .collect(Collectors.toList());
         System.out.println(lista2);
 
