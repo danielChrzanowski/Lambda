@@ -32,9 +32,7 @@ public class Lambda {
                 .filter(imieZaczynaSieNaAPredicate.and(nazwiskoZaczynaSieNaBPredicate).and(wiekPowyzej20LatPredicate))
                 .collect(Collectors.toList())
                 .forEach(s -> System.out.println(s.toString()));
-
     }
-
 
 }
 
