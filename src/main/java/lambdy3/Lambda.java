@@ -27,14 +27,17 @@ public class Lambda {
                 new Person("Ania", "Bednarek", 40)
         );
 
-        people
+        var collect = people
                 .stream()
-                .filter(imieZaczynaSieNaAPredicate.and(nazwiskoZaczynaSieNaBPredicate).and(wiekPowyzej20LatPredicate))
-                .collect(Collectors.toList())
-                .forEach(s -> System.out.println(s.toString()));
-
+                .filter(imieZaczynaSieNaAPredicate
+                        .and(nazwiskoZaczynaSieNaBPredicate)
+                        .and(wiekPowyzej20LatPredicate)
+                        .and(s -> s.age < 30)
+                        .or(s -> s.name.equals("Ala")))
+                .collect(Collectors.toList());
+        // .forEach(s -> System.out.println(s.toString()));
+        System.out.println(collect);
     }
-
 
 }
 
