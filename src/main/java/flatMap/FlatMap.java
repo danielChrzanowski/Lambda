@@ -18,7 +18,7 @@ public class FlatMap {
 
         var lista2 = lista
                 .stream()
-                .flatMap(m -> m.stream())
+                .flatMap(m -> m.stream().sorted())
                 .collect(Collectors.toList());
         System.out.println(lista2);
 
