@@ -1,5 +1,7 @@
 package lambdy3;
 
+import lombok.ToString;
+
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -29,13 +31,14 @@ public class Lambda {
                 .stream()
                 .filter(imieZaczynaSieNaAPredicate.and(nazwiskoZaczynaSieNaBPredicate).and(wiekPowyzej10LatPredicate))
                 .collect(Collectors.toList())
-                .forEach(s -> System.out.println(s.name + " " + s.lastName + " " + s.age));
+                .forEach(s -> System.out.println(s.toString()));
 
     }
 
 
 }
 
+@ToString
 class Person {
     String name, lastName;
     int age;
