@@ -29,7 +29,7 @@ public class Lambda {
 
         people
                 .stream()
-                .filter(imieZaczynaSieNaAPredicate.and(nazwiskoZaczynaSieNaBPredicate).and(wiekPowyzej10LatPredicate))
+                .filter(imieZaczynaSieNaAPredicate.and(nazwiskoZaczynaSieNaBPredicate).and(wiekPowyzej20LatPredicate))
                 .collect(Collectors.toList())
                 .forEach(s -> System.out.println(s.toString()));
 
@@ -51,5 +51,5 @@ class Person {
 
     static Predicate<Person> imieZaczynaSieNaAPredicate = person -> person.name.toUpperCase().startsWith("A");
     static Predicate<Person> nazwiskoZaczynaSieNaBPredicate = person -> person.lastName.toUpperCase().startsWith("B");
-    static Predicate<Person> wiekPowyzej10LatPredicate = person -> person.age > 20;
+    static Predicate<Person> wiekPowyzej20LatPredicate = person -> person.age > 20;
 }
