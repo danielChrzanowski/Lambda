@@ -14,9 +14,7 @@ public class Todo1 {
 
         //lambda
         InterfejsA lambda = () -> System.out.println("Lambda");
-
     }
-
 
 }
 

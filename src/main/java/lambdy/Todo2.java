@@ -12,7 +12,6 @@ public class Todo2 {
 
         //lambda
         InterfejsB lambda = () -> "lambda";
-
     }
 
 }

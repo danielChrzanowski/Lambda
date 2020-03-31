@@ -26,5 +26,5 @@ class KlasycznaImplementacja implements MyInterface {
 }
 
 //done 1 void go();                   - interfejs, klasyczna implementacja, klasa anonimowa, lambda
-//todo 2 String go();                 - interfejs, klasyczna implementacja, klasa anonimowa, lambda
-//todo 3 String go(String name);      - interfejs, klasyczna implementacja, klasa anonimowa, lambda
+//done 2 String go();                 - interfejs, klasyczna implementacja, klasa anonimowa, lambda
+//done 3 String go(String name);      - interfejs, klasyczna implementacja, klasa anonimowa, lambda
